@@ -1,0 +1,22 @@
+package rules;
+
+import com.myapp.sbdrools.model.TicketOffer;
+
+rule "Ticket Discount for 5 years and less"
+    when
+        offer: TicketOffer(age<=5)
+    then
+        offer.setDiscount(15);
+    end
+rule "Ticket Discount for age between 16 and 6"
+    when
+        offer: TicketOffer(age<=16 && age>5)
+    then
+        offer.setDiscount(10);
+    end
+rule "Ticket Discount for age above 16"
+    when
+        offer: TicketOffer(age>16)
+    then
+        offer.setDiscount(5);
+    end

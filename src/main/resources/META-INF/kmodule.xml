@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A named session rulesSession is created. The ksession rule is applicable for all drl file contained in the package rules-->
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="offer" packages="rules">
+        <ksession name="rulesSession" />
+    </kbase>
+</kmodule>
